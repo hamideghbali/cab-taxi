@@ -8,6 +8,19 @@ import { FaRegCreditCard } from "react-icons/fa6";
 import { HiOutlineSave } from "react-icons/hi";
 import { VscAccount } from "react-icons/vsc";
 import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { LiaIdCard } from "react-icons/lia";
+import { IoInformationCircleOutline } from "react-icons/io5";
+import { SlBookOpen } from "react-icons/sl";
+import { FiLogOut } from "react-icons/fi";
+
 
 export const SideBar = () => {
   return (
@@ -33,9 +46,39 @@ export const SideBar = () => {
               <HiOutlineSave className=" hover:text-gray-700" />
             </Link>
           </div>
-          <Link href="/account">
-            <VscAccount className="text-2xl hover:text-gray-700" />
-          </Link>
+          <div>
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <VscAccount className="text-2xl hover:text-gray-700" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuLabel className="flex gap-4 items-center">
+                  <VscAccount className="text-2xl hover:text-gray-700" />
+                  Account Deatails
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="flex gap-4 items-center">
+                  <IoInformationCircleOutline className="text-2xl hover:text-gray-700" />
+                  Terms and conditions
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="flex gap-4 items-center">
+                  <LiaIdCard className="text-2xl hover:text-gray-700" />
+                  Privacy policy
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="flex gap-4 items-center">
+                  <SlBookOpen className="text-2xl hover:text-gray-700" />
+                  Language
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="flex gap-4 items-center">
+                  <FiLogOut className="text-2xl hover:text-gray-700" />
+                  Log out
+                </DropdownMenuLabel>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
       </aside>
     </div>

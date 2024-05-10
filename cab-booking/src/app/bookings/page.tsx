@@ -15,20 +15,20 @@ export default function Page() {
         <CardHeader>
           <CardTitle className="mb-6 text-4xl ">Booking History</CardTitle>
           <div className="flex justify-between ">
-            <div className="flex justify-start gap-4">
-              <CardDescription className="text-[20px]">
+            <div className="flex justify-start gap-4 items-center">
+              <CardDescription className="text-[18px]">
                 All Trips
               </CardDescription>
-              <CardDescription className="text-[20px]">
+              <CardDescription className="text-[18px]">
                 In Progress
               </CardDescription>
-              <CardDescription className="text-[20px]">
+              <CardDescription className="text-[18px]">
                 Prebookings
               </CardDescription>
-              <CardDescription className="text-[20px]">
+              <CardDescription className="text-[18px]">
                 Completed
               </CardDescription>
-              <CardDescription className="text-[20px]">
+              <CardDescription className="text-[18px]">
                 Cancelled
               </CardDescription>
             </div>
@@ -41,6 +41,7 @@ export default function Page() {
               </Button>
             </div>
           </div>
+          <hr />
         </CardHeader>
         <CardContent>
           <div className="text-gray-400 flex justify-between mb-3">
