@@ -5,40 +5,62 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-
-
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
-  return <div className="p-5">
-
-    <Card>
-      <CardHeader>
-        <CardTitle className="mb-6 text-4xl">Booking History</CardTitle>
-        <div className="flex  gap-4 justify-between">
-
-        <CardDescription className="text-[20px]">All Trips</CardDescription>
-        <CardDescription className="text-[20px]">In Progerss</CardDescription>
-        <CardDescription className="text-[20px]">Prebookings</CardDescription>
-        <CardDescription className="text-[20px]">Compeleted</CardDescription>
-        <CardDescription className="text-[20px]">Cancelled</CardDescription>
-        <div>
-        <Button variant="outline" className="bg-gray-900 text-white hover:bg-gray-700 hover:text-white">+ New Booking</Button>
-
-        </div>
-
-        </div>
-
-
-      </CardHeader>
-      <CardContent>
-        <p>Card Content</p>
-      </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-    </Card>
-
-  </div>;
+  return (
+    <div className="p-5 bg-zinc-300 min-h-screen pt-20">
+      <Card>
+        <CardHeader>
+          <CardTitle className="mb-6 text-4xl ">Booking History</CardTitle>
+          <div className="flex justify-between ">
+            <div className="flex justify-start gap-4">
+              <CardDescription className="text-[20px]">
+                All Trips
+              </CardDescription>
+              <CardDescription className="text-[20px]">
+                In Progress
+              </CardDescription>
+              <CardDescription className="text-[20px]">
+                Prebookings
+              </CardDescription>
+              <CardDescription className="text-[20px]">
+                Completed
+              </CardDescription>
+              <CardDescription className="text-[20px]">
+                Cancelled
+              </CardDescription>
+            </div>
+            <div>
+              <Button
+                variant="outline"
+                className="bg-gray-900 text-white hover:bg-gray-700 hover:text-white"
+              >
+                + New Booking
+              </Button>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <div className="text-gray-400 flex justify-between mb-3">
+            <h3>DATE</h3>
+            <h3>TIME</h3>
+            <h3>TAXI COMPANY</h3>
+            <h3>FROM</h3>
+            <h3>TO</h3>
+            <h3 className="mr-10">AMOUNT</h3>
+          </div>
+        </CardContent>
+        <CardContent>
+          <span className="flex justify-center bg-zinc-100 py-4 rounded-lg hover:bg-white">
+            No data available
+          </span>
+        </CardContent>
+        <CardFooter>
+          <p className="text-gray-400 text-sm ">Items per page: 10 20 30</p>
+        </CardFooter>
+      </Card>
+    </div>
+  );
 }
