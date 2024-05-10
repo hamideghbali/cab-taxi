@@ -40,7 +40,7 @@ export const SideBar = () => {
           <div className="flex flex-col items-center gap-12 text-2xl flex-grow justify-center">
             <Link href="/">
               <span className="bg-red-500 d-block">
-                <CiCalendar className="hover:text-gray-700" />
+                <CiCalendar onClick={handleCiCalendarClick}  className="hover:text-gray-700" />
               </span>
             </Link>
             <Link href="/bookings">
@@ -58,7 +58,7 @@ export const SideBar = () => {
           </Link>
         </div>
         {showCard && (
-          <Card className="w-auto absolute right-0 z-10">
+          <Card className="w-auto absolute z-20">
             <CardHeader>
               <CardTitle>Book a trip</CardTitle>
             </CardHeader>
