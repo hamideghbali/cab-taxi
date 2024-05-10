@@ -51,31 +51,43 @@ export const SideBar = () => {
               <DropdownMenuTrigger>
                 <VscAccount className="text-2xl hover:text-gray-700" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuLabel className="flex gap-4 items-center">
-                  <VscAccount className="text-2xl hover:text-gray-700" />
-                  Account Deatails
-                </DropdownMenuLabel>
+              <DropdownMenuContent className="ml-24">
+                <Link href="/user-profile" className="cursor-pointer">
+                  <DropdownMenuLabel className="flex gap-4 items-center">
+                    <VscAccount className="text-2xl hover:text-gray-700" />
+                    Account Deatails
+                  </DropdownMenuLabel>
+                </Link>
                 <DropdownMenuSeparator />
-                <DropdownMenuLabel className="flex gap-4 items-center">
-                  <IoInformationCircleOutline className="text-2xl hover:text-gray-700" />
-                  Terms and conditions
-                </DropdownMenuLabel>
+                <Link href="https://becktaxi.assets.passenger.icabbi.com/terms-and-conditions-en.html">
+                  <DropdownMenuLabel className="flex gap-4 items-center">
+                    <IoInformationCircleOutline className="text-2xl hover:text-gray-700" />
+                    Terms and conditions
+                  </DropdownMenuLabel>
+                </Link>
                 <DropdownMenuSeparator />
-                <DropdownMenuLabel className="flex gap-4 items-center">
-                  <LiaIdCard className="text-2xl hover:text-gray-700" />
-                  Privacy policy
-                </DropdownMenuLabel>
+                <Link href="https://becktaxi.assets.passenger.icabbi.com/privacy-policy-en.html">
+                  <DropdownMenuLabel className="flex gap-4 items-center">
+                    <LiaIdCard className="text-2xl hover:text-gray-700" />
+                    Privacy policy
+                  </DropdownMenuLabel>
+                </Link>
                 <DropdownMenuSeparator />
+                <Link href="">
+                
                 <DropdownMenuLabel className="flex gap-4 items-center">
                   <SlBookOpen className="text-2xl hover:text-gray-700" />
                   Language
                 </DropdownMenuLabel>
+                </Link>
                 <DropdownMenuSeparator />
+                <Link href="//localhost:3000">
+                
                 <DropdownMenuLabel className="flex gap-4 items-center">
                   <FiLogOut className="text-2xl hover:text-gray-700" />
                   Log out
                 </DropdownMenuLabel>
+                </Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
