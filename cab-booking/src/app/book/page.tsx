@@ -26,7 +26,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="absolute bg-transparent m-10" style={{ zIndex: 500 }}>
+      <div className="absolute bg-transparent m-10 z-[500]">
         <Card>
           <CardHeader>
             <CardTitle>Book a trip</CardTitle>
