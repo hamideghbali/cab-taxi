@@ -11,8 +11,9 @@ import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -21,8 +22,8 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 import { SlBookOpen } from "react-icons/sl";
 import { FiLogOut } from "react-icons/fi";
 
-
 export const SideBar = () => {
+  const [position, setPosition] = React.useState("bottom");
   return (
     <div className="overflow-y-auto fixed left-0 top-0 w-24 bg-gray-200">
       <aside className="flex h-screen">
@@ -74,19 +75,55 @@ export const SideBar = () => {
                 </Link>
                 <DropdownMenuSeparator />
                 <Link href="">
-                
-                <DropdownMenuLabel className="flex gap-4 items-center">
-                  <SlBookOpen className="text-2xl hover:text-gray-700" />
-                  Language
-                </DropdownMenuLabel>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <DropdownMenuLabel className="flex gap-4 items-center">
+                        <SlBookOpen className="text-2xl hover:text-gray-700" />
+                        Language
+                      </DropdownMenuLabel>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-56">
+                      <DropdownMenuRadioGroup
+                        value={position}
+                        onValueChange={setPosition}
+                      >
+                        <DropdownMenuRadioItem value="top" className="py-3">
+                          English (Canada)
+                        </DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="bottom" className="py-3">
+                          English (United Kingdom)
+                        </DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="right" className="py-3">
+                          English (United States)
+                        </DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="right" className="py-3">
+                          Suomi (Finish)
+                        </DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="right" className="py-3">
+                          Francias
+                        </DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="right" className="py-3">
+                          Dutch (Netherlands)
+                        </DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="right" className="py-3">
+                          Espanol
+                        </DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="right" className="py-3">
+                          Tajik
+                        </DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="right" className="py-3">
+                          Persian (Farsi)
+                        </DropdownMenuRadioItem>
+                      </DropdownMenuRadioGroup>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </Link>
                 <DropdownMenuSeparator />
                 <Link href="//localhost:3000">
-                
-                <DropdownMenuLabel className="flex gap-4 items-center">
-                  <FiLogOut className="text-2xl hover:text-gray-700" />
-                  Log out
-                </DropdownMenuLabel>
+                  <DropdownMenuLabel className="flex gap-4 items-center">
+                    <FiLogOut className="text-2xl hover:text-gray-700" />
+                    Log out
+                  </DropdownMenuLabel>
                 </Link>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -96,3 +133,8 @@ export const SideBar = () => {
     </div>
   );
 };
+
+<DropdownMenuLabel className="flex gap-4 items-center">
+  <SlBookOpen className="text-2xl hover:text-gray-700" />
+  Language
+</DropdownMenuLabel>;
