@@ -93,10 +93,10 @@ export const SideBar = () => {
                         <DropdownMenuRadioItem value="bottom" className="py-3">
                           English (United Kingdom)
                         </DropdownMenuRadioItem>
-                        <DropdownMenuRadioItem value="right" className="py-3">
+                        <DropdownMenuRadioItem value="" className="py-3">
                           English (United States)
                         </DropdownMenuRadioItem>
-                        <DropdownMenuRadioItem value="right" className="py-3">
+                        <DropdownMenuRadioItem value="" className="py-3">
                           Suomi (Finish)
                         </DropdownMenuRadioItem>
                         <DropdownMenuRadioItem value="right" className="py-3">
