@@ -43,7 +43,7 @@ export const SideBar = () => {
             <Link href="/payment">
               <FaRegCreditCard className=" hover:text-gray-700" />
             </Link>
-            <Link href="/saved-cabs">
+            <Link href="/favourite">
               <HiOutlineSave className=" hover:text-gray-700" />
             </Link>
           </div>
